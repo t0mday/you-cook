@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import searchResultsReducer from '../components/searchResults/searchResultsSlice';
+import favouritesReducer from '../components/favourites/favouritesSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-  },
+    favourites: favouritesReducer,
+    searchResults: searchResultsReducer
+  }
 });
