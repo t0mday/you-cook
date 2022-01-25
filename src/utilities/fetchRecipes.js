@@ -1,8 +1,11 @@
-export const fetchRecipes = async (searchTerm) => {
+
+export const fetchRecipes = async (searchTerm, restrictions) => {
     const endpoint = 'https://api.edamam.com/api/recipes/v2';
     const appId = '42b8711c';
     const appKey = '0d2bd2389564a86b6295767e677d725d';
-    const url = endpoint + '?type=public&q=' + searchTerm + '&app_id=' + appId + '&app_key=' + appKey; 
+    let restrictionsString = '';
+    restrictions.forEach(restriction => restrictionsString += `&health=${restriction}`);
+    const url = endpoint + '?type=public&q=' + searchTerm + '&app_id=' + appId + '&app_key=' + appKey + restrictionsString;
     const response = await fetch(url);
     return response;
 }
@@ -19,4 +22,3 @@ export const strip = (data) => {
     showDetails: false
   }));
 }
-

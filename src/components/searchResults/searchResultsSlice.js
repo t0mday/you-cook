@@ -4,8 +4,8 @@ import { fetchRecipes, strip } from '../../utilities/fetchRecipes';
 
 export const getRecipes = createAsyncThunk(
   'searchResults/getRecipes',
-  async (searchTerm) => {
-    const response = await fetchRecipes(searchTerm);
+  async ({cleanedSearchTerm, restrictions}) => {
+    const response = await fetchRecipes(cleanedSearchTerm, restrictions);
     const recipes = await response.json();
     const stripped = strip(recipes);
     return stripped;
