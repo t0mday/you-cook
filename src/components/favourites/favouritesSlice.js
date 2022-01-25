@@ -10,10 +10,13 @@ export const favouritesSlice = createSlice({
       state.recipes.push(action.payload);
     },
     removeFavourite: (state, action) => {
-      state.recipes = state.recipes.filter(recipe => recipe.uri !== action.payload.uri);
+      state.recipes = state.recipes.filter(recipe => recipe.uri !== action.payload);
     }
   }
 });
 
+export const selectAllFavourites = (state) => state.favourites.recipes;
+
 export const {addFavourite, removeFavourite} = favouritesSlice.actions;
+
 export default favouritesSlice.reducer;

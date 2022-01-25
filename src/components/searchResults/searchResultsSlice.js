@@ -20,8 +20,11 @@ export const searchResultsSlice = createSlice({
     hasError: false
   },
   reducers: {
-    removeRecipe: (state, action) => {
-      state.recipes = state.recipes.filter(recipe => recipe.uri !== action.payload.uri);
+    addResult: (state, action) => {
+      state.recipes.push(action.payload);
+    },
+    removeResult: (state, action) => {
+      state.recipes = state.recipes.filter(recipe => recipe.uri !== action.payload);
     }
   },
   extraReducers: {
@@ -43,6 +46,6 @@ export const searchResultsSlice = createSlice({
 
 export const selectAllResults = (state) => state.searchResults.recipes; 
 
-export const { removeRecipe } = searchResultsSlice.actions;
+export const { addResult, removeResult } = searchResultsSlice.actions;
 
 export default searchResultsSlice.reducer;
