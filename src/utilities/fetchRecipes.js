@@ -16,7 +16,7 @@ export const strip = (data) => {
     source: hit.recipe.source,
     healthLabels: hit.recipe.healthLabels,
     ingredients: hit.recipe.ingredientLines,
-    details: false
+    showDetails: false
   }));
 }
 
