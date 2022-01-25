@@ -1,16 +1,10 @@
 import React from 'react';
 import './App.css';
 import attribution from './Edamam_Badge_Transparent.svg';
-//import { useDispatch } from 'react-redux';
-//import { useEffect } from 'react';
-//import { getRecipes} from '../components/searchResults/searchResultsSlice';
-
-
+import Search from '../components/search/Search';
+import SearchResults from '../components/searchResults/SearchResults';
 
 function App() {
-  //const dispatch = useDispatch();
-  //useEffect(() => dispatch(getRecipes('chicken')), []);
-  
 
   return (
     <div className="App">
@@ -18,13 +12,13 @@ function App() {
         <h1>you Cook</h1>
       </header>
       <section className='favourites'>
-        {/*<Favourites />*/}
+        <Search />
       </section>
       <section className='search'>
-        {/*<Search />*/}
+        {/*<Favourites />*/}
       </section>
       <section className='searchResults'>
-        {/*<SearchResults />*/}
+        <SearchResults />
       </section>
       <footer>
         <img src={attribution} alt="powered by Edamam" />

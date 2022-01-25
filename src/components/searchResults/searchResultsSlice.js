@@ -2,8 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchRecipes, strip } from '../../utilities/fetchRecipes';
 
-//const searchTerm = 'chicken';
-
 export const getRecipes = createAsyncThunk(
   'searchResults/getRecipes',
   async (searchTerm) => {
@@ -42,6 +40,8 @@ export const searchResultsSlice = createSlice({
     }
   }
 });
+
+export const selectAllResults = (state) => state.searchResults.recipes; 
 
 export const { removeRecipe } = searchResultsSlice.actions;
 
