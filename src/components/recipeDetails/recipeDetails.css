@@ -1,0 +1,58 @@
+.show {
+  position: fixed;
+  top: 5vh;
+  left: 5%;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(35, 61, 17);
+  background-color: rgb(202, 200, 176);
+  overflow: auto;
+  max-height: 85vh;
+}
+.noShow {
+  display: none;
+}
+
+.show img {
+  border: 1px solid rgb(109, 112, 96);
+  border-radius: 10px;
+}
+
+h2 {
+  clear: right;
+}
+
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ingredients {
+  text-align: left;
+  list-style: none;
+}
+
+.close {
+  display: block;
+  float: right;
+  font-size: 2rem;
+  background: none;
+}
+
+span {
+  font-weight: bold;
+}
+
+.email {
+ margin: 20px;
+}
+
+button {
+  border: 1px solid rgb(109, 112, 96);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem;
+}

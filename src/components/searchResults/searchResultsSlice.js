@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import { fetchRecipes, strip } from '../../utilities/fetchRecipes';
 
 export const getRecipes = createAsyncThunk(
@@ -25,6 +25,10 @@ export const searchResultsSlice = createSlice({
     },
     removeResult: (state, action) => {
       state.recipes = state.recipes.filter(recipe => recipe.uri !== action.payload);
+    },
+    updateShowDetails: (state, action) => {
+      const recipeIndex = state.recipes.findIndex(recipe => recipe.uri === action.payload.uri);
+      state.recipes[recipeIndex].showDetails = action.payload.showDetails;
     }
   },
   extraReducers: {
@@ -46,6 +50,6 @@ export const searchResultsSlice = createSlice({
 
 export const selectAllResults = (state) => state.searchResults.recipes; 
 
-export const { addResult, removeResult } = searchResultsSlice.actions;
+export const { addResult, removeResult, updateShowDetails } = searchResultsSlice.actions;
 
 export default searchResultsSlice.reducer;

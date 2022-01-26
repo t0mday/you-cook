@@ -1,13 +1,14 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectAllResults, addResult, removeResult } from '../searchResults/searchResultsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addResult, removeResult, updateShowDetails } from '../searchResults/searchResultsSlice';
 import { addFavourite, removeFavourite } from '../favourites/favouritesSlice';
+import RecipeDetails from '../recipeDetails/RecipeDetails';
 
 const Recipe = ({ data, favourite }) => {
 
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const toggleFavourite = () => {
     if(favourite) {
       dispatch(addResult(data));
       dispatch(removeFavourite(data.uri));
@@ -16,16 +17,31 @@ const Recipe = ({ data, favourite }) => {
       dispatch(removeResult(data.uri));
     }
   }
+  const selected = useSelector(state => state.searchResults.recipes.filter(recipe => recipe.uri === data.uri));
+  const recipe = selected[0];
+
+  
+  const showRecipeDetails = () => {
+    console.log(recipe.showDetails);
+
+    const payload = {uri: recipe.uri, showDetails: true};
+ 
+  
+
+    dispatch(updateShowDetails(payload));
+    console.log(recipe.showDetails);
+  }
+
 
   return (
     <div className='recipe'>
-      <h3>{data.name}</h3>
-      <h4>Ingredients</h4>
-      <img src={data.image} alt={data.name} />
-      <div className='ingredients'>
-        {data.ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+      <div className={recipe.showDetails ? 'show' : 'noShow'} >
+        <RecipeDetails recipe={recipe} />
       </div>
-      <button className='toggleFavourite' onClick={handleClick} >{favourite ? 'Remove favourite': 'Add to favourites'}</button>
+      <h3>{recipe.name}</h3>
+      <img src={recipe.image} alt={recipe.name} />
+      <button className='toggleFavourite' onClick={toggleFavourite} >{favourite ? 'Remove favourite': 'Add to favourites'}</button>
+      <button className='showDetails' onClick={showRecipeDetails} >See more details</button>
     </div>
   );
 }

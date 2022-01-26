@@ -14,11 +14,12 @@ export const strip = (data) => {
   return data.hits.map(hit => ({
     name: hit.recipe.label,
     uri: hit.recipe.uri.match(/recipe_([\S]+)/)[1],
-    url: hit.recipe.url,
     image: hit.recipe.image,
     source: hit.recipe.source,
+    url: hit.recipe.url,
     healthLabels: hit.recipe.healthLabels,
     ingredients: hit.recipe.ingredientLines,
-    showDetails: false
+    showDetails: false,
+    email: false
   }));
 }

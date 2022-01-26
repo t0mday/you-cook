@@ -9,7 +9,7 @@ const Favourites = () => {
 
   return (
     <div className='favourites'>
-      {favourites.map(recipe => <Recipe favourite={true} data={recipe} key={recipe.uri} />)}
+      {favourites.map(recipe => <Recipe className="recipe" favourite={true} data={recipe} key={recipe.uri} />)}
     </div>
   )
 }

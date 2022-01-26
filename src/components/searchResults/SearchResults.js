@@ -9,7 +9,7 @@ const SearchResults = () => {
 
   return (
     <div className='recipes'>
-      {results.map(recipe => <Recipe favourite={false} data={recipe} key={recipe.uri} />)}
+      {results.map(recipe => <Recipe className="recipe" favourite={false} data={recipe} key={recipe.uri} />)}
     </div>
   );
 }
