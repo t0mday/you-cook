@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Recipe from '../recipe/Recipe';
-import { selectAllFavourites } from './favouritesSlice';
+import { selectFavourites } from '../recipes/recipesSlice';
 
 const Favourites = () => {
 
-  const favourites = useSelector(selectAllFavourites);
+  const favourites = useSelector(selectFavourites);
 
   return (
     <div className='favourites'>
-      {favourites.map(recipe => <Recipe className="recipe" favourite={true} data={recipe} key={recipe.uri} />)}
+      {favourites.map(recipe => <Recipe className="recipe" id={recipe.uri} key={recipe.uri} />)}
     </div>
   )
 }

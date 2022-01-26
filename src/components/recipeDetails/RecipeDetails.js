@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { updateShowDetails } from '../searchResults/searchResultsSlice';
+import { toggleShowDetails } from '../recipes/recipesSlice';
 import './recipeDetails.css';
 
 const RecipeDetails = ({recipe}) => {
 
+  const uri = recipe.uri;
   const dispatch = useDispatch();
-  const payload = {uri: recipe.uri, showDetails: false};
 
   const handleClose = () => {
-    dispatch(updateShowDetails(payload));
+    dispatch(toggleShowDetails(uri));
   }
 
   return (

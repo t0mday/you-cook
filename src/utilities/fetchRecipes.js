@@ -19,6 +19,7 @@ export const strip = (data) => {
     url: hit.recipe.url,
     healthLabels: hit.recipe.healthLabels,
     ingredients: hit.recipe.ingredientLines,
+    favourite: false,
     showDetails: false,
     email: false
   }));

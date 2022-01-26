@@ -1,3 +1,4 @@
+/*
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import { fetchRecipes, strip } from '../../utilities/fetchRecipes';
@@ -53,3 +54,4 @@ export const selectAllResults = (state) => state.searchResults.recipes;
 export const { addResult, removeResult, updateShowDetails } = searchResultsSlice.actions;
 
 export default searchResultsSlice.reducer;
+*/

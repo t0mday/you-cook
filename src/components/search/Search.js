@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSearchTerm, clearSearchTerm, selectSearchTerm, addRestriction, removeRestriction, selectRestrictions } from './searchSlice';
-import { getRecipes } from '../searchResults/searchResultsSlice';
+import { getRecipes } from '../recipes/recipesSlice';
 
 const Search = () => {
 

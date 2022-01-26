@@ -14,12 +14,28 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  background-image: url('../images/creveta-1327214.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  background-color: rgba(250, 235, 215, 0.8);
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  color: rgb(83,153,0);/*rgb(16, 49, 100);*/
+}
+
+.search {
+  background-color: rgb(184,213,22);
 }
 
 .App-link {
