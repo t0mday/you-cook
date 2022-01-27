@@ -2,10 +2,31 @@
   background-color: rgb(184,213,22);
   padding: 30px;
 }
-.test {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.search button {
+  background-color: rgb(255, 113, 9);
 }
 
+.checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: 1px solid rgb(13, 41, 45);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  margin-right: 10px;
+  white-space: nowrap;
+  text-align: left;
+  float: left;
+  width: 110px;
+}

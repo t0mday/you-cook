@@ -6,13 +6,17 @@
   border: 2px solid black;
   border-radius: 10px;
   padding: 20px;
-  color: rgb(35, 61, 17);
   background-color: rgb(202, 200, 176);
   overflow: auto;
   max-height: 85vh;
 }
+
 .noShow {
   display: none;
+}
+
+.show h2, .show h3, .show p, .show li {
+  color: rgb(35, 61, 17);
 }
 
 .recipe-details {
@@ -35,7 +39,6 @@
 }
 
 .close {
-  display: block;
   float: right;
   font-size: 2rem;
   background: none;

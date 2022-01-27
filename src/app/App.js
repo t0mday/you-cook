@@ -14,11 +14,10 @@ function App() {
         </div>
       </header>
       <section className='search'>
+        <h2>Find Recipes</h2>
         <Search />
       </section>
-      <section>
-        <Recipes />
-      </section>
+      <Recipes />
       <footer>
         <img src={attribution} alt="powered by Edamam" />
         <p>&copy; Tom Day 2022</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './recipe.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavourite, toggleShowDetails, toggleEmail } from '../recipes/recipesSlice';
+import { toggleFavourite, toggleShowDetails } from '../recipes/recipesSlice';
 import RecipeDetails from '../recipeDetails/RecipeDetails';
 
 const Recipe = ({id}) => {

@@ -4,7 +4,8 @@ export const searchSlice = createSlice({
   name: 'search',
   initialState: {
     searchTerm: '',
-    restrictions: []
+    restrictions: [],
+    cuisine: []
   },
   reducers: {
     setSearchTerm: (state, action) => {
@@ -18,13 +19,20 @@ export const searchSlice = createSlice({
     },
     removeRestriction: (state, action) => {
       state.restrictions = state.restrictions.filter(restriction => restriction !== action.payload);
+    },
+    addCuisine: (state, action) => {
+      state.cuisine.push(action.payload);
+    },
+    removeCuisine: (state, action) => {
+      state.cuisine = state.cuisine.filter(type => type !== action.payload);
     }
   }
 });
 
-export const { setSearchTerm, clearSearchTerm, addRestriction, removeRestriction } = searchSlice.actions;
+export const { setSearchTerm, clearSearchTerm, addRestriction, removeRestriction, addCuisine, removeCuisine } = searchSlice.actions;
 
 export const selectSearchTerm = (state) => state.search.searchTerm;
 export const selectRestrictions = (state) => state.search.restrictions;
+export const selectCuisine = (state) => state.search.cuisine;
 
 export default searchSlice.reducer;

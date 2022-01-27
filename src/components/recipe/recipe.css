@@ -1,19 +1,20 @@
 .recipe {
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid rgb(13, 41, 45);
   border-radius: 10px;
   width: 340px;
   height: 470px;
   margin: 30px;
   background-color: rgb(248, 243, 227);
 }
+
 img {
-  border: 1px solid black;
+  border: 1px solid rgb(13, 41, 45);
   border-radius: 10px;
   display: block;
   margin: 20px;
 }
 
 button {
-  background-color: rgb(226, 186, 74);
+  background-color: rgb(184,213,22);
 }

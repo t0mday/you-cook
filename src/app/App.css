@@ -5,7 +5,8 @@
 .App-header {
   background-image: url('../images/creveta-1327214.jpg');
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  background-position: 60% 15%;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -23,6 +24,7 @@
 h1 {
   color: rgb(83,153,0);
 }
+
 h1 span {
   font-style: italic;
 }
@@ -33,8 +35,13 @@ footer p {
   padding: 30px;
   font-family: Helvetica, Tahoma, sans-serif;
 }
+
 footer img {
   float: left;
   width: 200px;
   border: none;
+}
+
+section {
+  border-bottom: 3px solid rgb(17, 54, 112);
 }
