@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSearchTerm, clearSearchTerm, selectSearchTerm, addRestriction, removeRestriction, selectRestrictions } from './searchSlice';
 import { getRecipes } from '../recipes/recipesSlice';
+import './search.css';
 
 const Search = () => {
 
@@ -29,6 +30,8 @@ const Search = () => {
   };
 
   return (
+    <div className='test'>
+      <h2>Find Recipes</h2>
     <form onSubmit={handleSubmit} >
       <input name="searchField" type="text" onChange={handleInput} value={searchTerm} placeholder='Enter search term food item(s)' required />
       <input id="gluten-free" type="checkbox" checked={gf} onChange={handleCheck} />
@@ -41,6 +44,7 @@ const Search = () => {
       <label htmlFor="vegan">Vegan</label>
       <button type="submit" >Search Recipes</button>
     </form>
+    </div>
   );
 }
 

@@ -17,10 +17,8 @@ export const strip = (data) => {
     image: hit.recipe.image,
     source: hit.recipe.source,
     url: hit.recipe.url,
-    healthLabels: hit.recipe.healthLabels,
     ingredients: hit.recipe.ingredientLines,
     favourite: false,
     showDetails: false,
-    email: false
   }));
 }

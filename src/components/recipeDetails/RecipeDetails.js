@@ -13,22 +13,17 @@ const RecipeDetails = ({recipe}) => {
   }
 
   return (
-    <div className='recipe-details'>
+    <div>
       <button className='close' onClick={handleClose} >X</button>
-      <h2>{recipe.name}</h2>
-      <img src={recipe.image} alt={recipe.name} />
-      <h3>Ingredients</h3>
-      <div className='details'>
+      <div className='recipe-details'>
+        <h2>{recipe.name}</h2>
+        <p>Recipe by <span>{recipe.source}</span></p>
+        <a href={recipe.url} target="_blank" rel='noreferrer' >{recipe.url}</a>
+        <img src={recipe.image} alt={recipe.name} />
         <div className='ingredients'>
+          <h3>Ingredients</h3>
           {recipe.ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
         </div>
-        <div className='location'>
-          <p>Recipe by <span>{recipe.source}</span></p>
-          <a href={recipe.url} target="_blank" rel='noreferrer' >{recipe.url}</a>
-        </div>
-      </div>
-      <div className='email'>
-        <button >Add to email</button>
       </div>
     </div>
   );

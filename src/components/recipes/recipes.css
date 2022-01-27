@@ -1,0 +1,16 @@
+.favourites {
+  background-color: rgb(231, 237, 196);
+  padding: 30px;
+}
+
+.searchResults {
+  background-color: rgb(255, 244, 210);
+  padding: 30px;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-between;
+}

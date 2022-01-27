@@ -8,7 +8,7 @@ const SearchResults = () => {
   const results = useSelector(selectSearchResults);
 
   return (
-    <div className='recipes'>
+    <div className='recipes' >
       {results.map(recipe => <Recipe className="recipe" id={recipe.uri} key={recipe.uri} />)}
     </div>
   );

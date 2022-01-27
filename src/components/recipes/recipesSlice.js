@@ -27,10 +27,6 @@ export const recipesSlice = createSlice({
     toggleShowDetails: (state, action) => {
       const recipeIndex = state.recipes.findIndex(recipe => recipe.uri === action.payload);
       state.recipes[recipeIndex].showDetails = !state.recipes[recipeIndex].showDetails;
-    },
-    toggleEmail: (state, action) => {
-      const recipeIndex = state.recipes.findIndex(recipe => recipe.uri === action.payload);
-      state.recipes[recipeIndex].email = !state.recipes[recipeIndex].email;
     }
   },
   extraReducers: {

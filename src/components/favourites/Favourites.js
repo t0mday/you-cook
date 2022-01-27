@@ -8,7 +8,7 @@ const Favourites = () => {
   const favourites = useSelector(selectFavourites);
 
   return (
-    <div className='favourites'>
+    <div className='recipes'>
       {favourites.map(recipe => <Recipe className="recipe" id={recipe.uri} key={recipe.uri} />)}
     </div>
   )

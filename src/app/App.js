@@ -9,21 +9,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className='title'>
-          <h1>you Cook</h1>
+        <div className='banner'>
+          <h1><span>you</span> Cook</h1>
         </div>
       </header>
       <section className='search'>
-        <input type='color'></input>
-        <h2>Find Recipes</h2>
         <Search />
       </section>
-      <br />
-      <hr />
-      <br />
-      <Recipes />
+      <section>
+        <Recipes />
+      </section>
       <footer>
         <img src={attribution} alt="powered by Edamam" />
+        <p>&copy; Tom Day 2022</p>
       </footer>
     </div>
   );
