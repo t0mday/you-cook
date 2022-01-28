@@ -10,13 +10,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className='banner'>
-          <h1><span>you</span> Cook</h1>
+          <h1>You Cook</h1>
         </div>
       </header>
       <section className='search'>
         <h2>Find Recipes</h2>
         <Search />
       </section>
+      <hr />
       <Recipes />
       <footer>
         <img src={attribution} alt="powered by Edamam" />

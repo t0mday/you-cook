@@ -11,8 +11,8 @@ Recipe search results can be saved to a favourites section and further details f
 
 ### Redux Store
 
-* src/app/store.js
-* Two state slices of recipesSlice.js and 
+* *src/app/store.js*
+* Two state slices of *recipesSlice.js* and *searchSlice.js*
 
 ### React Components
 

@@ -15,18 +15,22 @@
 
 .banner {
   font-size: 4rem;
-  background-color: rgba(250, 235, 215, 0.8);
-  margin: 0;
+  background-color: rgba(0,0,0,0.3);
   width: 100%;
   padding: 2rem;
 }
 
 h1 {
-  color: rgb(83,153,0);
+  color: white;
 }
 
 h1 span {
   font-style: italic;
+}
+
+footer {
+  border-top: 2px solid #ccc;
+  background-color: #eee;
 }
 
 footer p {
@@ -42,6 +46,6 @@ footer img {
   border: none;
 }
 
-section {
-  border-bottom: 3px solid rgb(17, 54, 112);
+hr {
+  width: 90%;
 }

@@ -11,7 +11,7 @@ import {
   selectRestrictions,
   selectCuisine 
 } from './searchSlice';
-import { getRecipes } from '../recipes/recipesSlice';
+import { getRecipes, selectSearchResults } from '../recipes/recipesSlice';
 import './search.css';
 
 const Search = () => {
@@ -43,6 +43,10 @@ const Search = () => {
   const med = cuisine.includes('Mediterranean');
   const mex = cuisine.includes('Mexican');
 
+  const results = useSelector(selectSearchResults);
+  const showPrompt = results.length > 0 ? true : false;
+  console.log(showPrompt);
+  
   const handleInput = ({target}) => {
     dispatch(setSearchTerm(target.value));
   };
@@ -66,6 +70,7 @@ const Search = () => {
     <form onSubmit={handleSubmit} >
       <input id="searchField" name="searchField" type="text" onChange={handleInput} value={searchTerm} placeholder='Enter food to search' required />
       <button type="submit" >Search Recipes</button>
+      <p className={showPrompt ? 'showPrompt' : 'noShowPrompt'}>Scroll down to see results</p>
       <div className="checkboxes">
         <fieldset className="restrictions">
           <legend>Restrictions</legend>
@@ -126,7 +131,7 @@ const Search = () => {
           </label>
           <label htmlFor="Eastern Europe">
             <input id="Eastern Europe" type="checkbox" checked={eas} onChange={handleCuisineCheck} />
-            Eastern Europe
+            East Europe
           </label>
           <label htmlFor="French">
             <input id="French" type="checkbox" checked={fre} onChange={handleCuisineCheck} />

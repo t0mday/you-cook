@@ -1,20 +1,28 @@
 .recipe {
   padding: 10px;
-  border: 2px solid rgb(13, 41, 45);
-  border-radius: 10px;
+  border: 1px solid #ccc;
   width: 340px;
   height: 470px;
   margin: 30px;
-  background-color: rgb(248, 243, 227);
+}
+
+.recipe-title {
+  height: 53px;
 }
 
 img {
-  border: 1px solid rgb(13, 41, 45);
-  border-radius: 10px;
+  border: 1px solid #ccc;
   display: block;
   margin: 20px;
 }
 
-button {
-  background-color: rgb(184,213,22);
+.recipe-buttons {
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-buttons button {
+  margin: 10px 0;
 }

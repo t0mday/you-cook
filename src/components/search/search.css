@@ -1,10 +1,15 @@
-.search {
-  background-color: rgb(184,213,22);
-  padding: 30px;
+.showPrompt {
+  font-style: italic;
+  font-weight: bold;
 }
 
-.search button {
-  background-color: rgb(255, 113, 9);
+.noShowPrompt {
+  display: none;
+}
+
+#searchField {
+  border: 2px solid rgb(50,50,50);
+  padding: 5px;
 }
 
 .checkboxes {
@@ -13,7 +18,7 @@
 }
 
 fieldset {
-  border: 1px solid rgb(13, 41, 45);
+  border: 1px solid #333;
   border-radius: 5px;
   padding: 15px;
   margin: 10px;
@@ -28,5 +33,5 @@ label {
   white-space: nowrap;
   text-align: left;
   float: left;
-  width: 110px;
+  width: 130px;
 }

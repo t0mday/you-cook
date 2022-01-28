@@ -10,6 +10,7 @@ return (
       <h2>Favourites</h2>
       <Favourites />
     </section>
+    <hr />
     <section className='searchResults'>
       <h2>Search Results</h2>
       <SearchResults />

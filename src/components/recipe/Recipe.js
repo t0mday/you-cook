@@ -27,10 +27,14 @@ const Recipe = ({id}) => {
       <div className={showDetails ? 'show' : 'noShow'} >
         <RecipeDetails recipe={recipe} />
       </div>
-      <h3>{recipe.name}</h3>
+      <div className='recipe-title'>
+        <h3>{recipe.name}</h3>
+      </div>
       <img src={recipe.image} alt={recipe.name} />
-      <button className='toggleFavourite' onClick={handleToggleFavourite} >{favourite ? 'Remove favourite': 'Add to favourites'}</button>
-      <button className='showDetails' onClick={handleToggleShowDetails} >See more details</button>
+      <div className="recipe-buttons">
+        <button className='toggleFavourite' onClick={handleToggleFavourite} >{favourite ? 'Remove favourite': 'Add to favourites'}</button>
+        <button className='showDetails' onClick={handleToggleShowDetails} >See more details</button>
+      </div>
     </div>
   );
 }
