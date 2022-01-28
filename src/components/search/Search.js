@@ -21,6 +21,7 @@ const Search = () => {
   const restrictions = useSelector(selectRestrictions);
   const cuisine = useSelector(selectCuisine);
 
+  // boolean variables for each Restriction checkbox
   const gf = restrictions.includes('gluten-free');
   const df = restrictions.includes('dairy-free');
   const veggie = restrictions.includes('vegetarian');
@@ -32,6 +33,7 @@ const Search = () => {
   const pf = restrictions.includes('pork-free');
   const kosh = restrictions.includes('kosher');
 
+  // boolean variables for each Cuisine checkbox
   const asi = cuisine.includes('Asian');
   const car = cuisine.includes('Caribbean');
   const chi = cuisine.includes('Chinese');
@@ -44,21 +46,25 @@ const Search = () => {
   const mex = cuisine.includes('Mexican');
 
   const results = useSelector(selectSearchResults);
+  // provides for a prompt to the user to scroll down when there are recipes in Search Results
   const showPrompt = results.length > 0 ? true : false;
-  console.log(showPrompt);
   
+  // adds search term to state
   const handleInput = ({target}) => {
     dispatch(setSearchTerm(target.value));
   };
 
+  // adds restrictions from checkboxes to state
   const handleRestrictionsCheck = ({target}) => {
     target.checked ? dispatch(addRestriction(target.id)) : dispatch(removeRestriction(target.id));
   }
 
+  // adds cuisine types from checkboxes to state
   const handleCuisineCheck = ({target}) => {
     target.checked ? dispatch(addCuisine(target.id)) : dispatch(removeCuisine(target.id));
   }
 
+  // dispatches api call for new recipe search
   const handleSubmit = (e) => {
     e.preventDefault();
     const cleanedSearchTerm = searchTerm.replace(/[&]/g, " ").replace(/[^a-zA-Z ]/g, "");
