@@ -16,12 +16,12 @@ Recipe search results can be saved to a favourites section and further details f
 
 ### React Components
 
-* <App /> at the top level
-* <Search /> and <Recipes /> at next level
-* <SearchResults /> and <Favourites /> rendered by <Recipes /> 
-* Individual <Recipe /> lists rendered by <SearchResults /> and <Favourites />
-* Recipes can move between SearchResults and Favourites
-* Clicking within a recipe brings up a <RecipeDetails /> modal
+* ***App*** at the top level
+* ***Search*** and ***Recipes*** at next level
+* ***SearchResults*** and ***Favourites*** rendered by ***Recipes*** 
+* Individual ***Recipe*** lists rendered by ***SearchResults*** and ***Favourites***
+* Recipes can move between ***SearchResults*** and ***Favourites*** based on user interaction
+* Clicking within a recipe brings up a ***RecipeDetails*** modal
 * Original online location of recipe can be reached from there
 
-Recipes are fetched from Edamam by fetchRecipes.js in utilities
+Recipes are fetched from Edamam by *fetchRecipes.js* in utilities
