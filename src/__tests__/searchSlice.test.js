@@ -6,6 +6,8 @@ const initialState = {
   restrictions: []
 }
 
+// tests at reducer level for each action creator
+
 test('should return an empty initial state', () => {
   expect(reducer(undefined, {})).toEqual(initialState);
 });

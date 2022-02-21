@@ -49,7 +49,6 @@ export const recipesSlice = createSlice({
 
 export const selectSearchResults = (state) => state.recipes.recipes.filter(recipe => recipe.favourite === false);
 export const selectFavourites = (state) => state.recipes.recipes.filter(recipe => recipe.favourite === true);
-export const selectForEmail = (state) => state.recipes.recipes.filter(recipe => recipe.email === true);
 
 export const { toggleFavourite, toggleShowDetails, toggleEmail } = recipesSlice.actions;
 

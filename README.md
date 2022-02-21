@@ -1,5 +1,7 @@
 # You Cook
 
+![you cook banner](./you-cook-image.png "You Cook banner")
+
 This project is a React App, using a Redux store.
 It uses the Recipe Search API from Edamam https://www.edamam.com
 

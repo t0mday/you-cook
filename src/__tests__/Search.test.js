@@ -31,14 +31,17 @@ const cuisineLabels = [
   'Mexican'
 ];
 
-let handleCuisineCheck = jest.fn();
+
 let asFragment;
 beforeEach(() => {
    asFragment = render(<Provider store={store}><Search /></Provider>);
 });
+// snapshot
 test('the Search component should render correctly', () => {
   expect(asFragment).toMatchSnapshot();
 });
+
+// tests for behaviour of react controlled inputs
 
 test('the searchbox should be empty to start with, and updated with a user entered value', () => {
   expect(screen.getByPlaceholderText('Enter food to search')).toHaveValue('');
