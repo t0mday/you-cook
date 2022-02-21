@@ -2,6 +2,8 @@
 
 ![you cook banner](./you-cook-image.png "You Cook banner")
 
+You can see a demo of the live site at  https://you-cook.netlify.app
+
 This project is a React App, using a Redux store.
 It uses the Recipe Search API from Edamam https://www.edamam.com
 
