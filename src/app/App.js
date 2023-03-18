@@ -21,7 +21,7 @@ function App() {
       <Recipes />
       <footer>
         <img src={attribution} alt="powered by Edamam" />
-        <p>&copy; Tom Day 2022</p>
+        <p>&copy; Tom Day 2023</p>
       </footer>
     </div>
   );
